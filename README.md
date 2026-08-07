@@ -4,7 +4,41 @@ AI 바이브 코딩 학습을 위한 연습용 프로젝트입니다.
 
 ## 현재 상태
 
-프로젝트 초기 단계로, 아직 코드가 없습니다.
+백엔드(FastAPI)와 프론트엔드(Next.js)의 기본 뼈대가 생성되었습니다.
+
+## 프로젝트 구조
+
+```
+.
+├── backend/    # FastAPI 백엔드
+│   ├── app/
+│   │   └── main.py
+│   └── requirements.txt
+└── frontend/   # Next.js 프론트엔드 (TypeScript, App Router)
+```
+
+## 실행 방법
+
+### 백엔드
+
+```bash
+cd backend
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+`GET /health` 요청 시 `{"status": "ok"}` 응답을 확인할 수 있습니다.
+
+### 프론트엔드
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+`http://localhost:3000` 에서 확인할 수 있습니다.
 
 ## 다음 할 일
 
@@ -23,3 +57,4 @@ AI 바이브 코딩 학습을 위한 연습용 프로젝트입니다.
 ## 관련 이슈
 
 - #1 README.md 추가 필요
+- KAN-2 웹앱 프로젝트 뼈대 생성 필요
